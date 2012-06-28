@@ -1,0 +1,41 @@
+<% query=Query.find(:first, :conditions => ["id=?", query_id]) %>
+<% if query!=nil %>
+	<% sort_init(query.sort_criteria.empty? ? [['id', 'desc']] : query.sort_criteria) %>
+	<% sort_update(query.sortable_columns) %>
+	<% issues=query.issues(:include => [:assigned_to, :tracker, :priority, :category, :fixed_version], :order => sort_clause) %>
+	<h2><%= query.new_record? ? l(:label_issue_plural) : h(query.name) %> (<%= issues.size %>)</h2>
+
+	<table class="list issues">
+	<thead>
+		<tr>
+			<th>#</th>
+	        <% query.columns.each do |column| %>
+	          <%= content_tag('th', h(column.caption)) %>
+	        <% end %>
+	  	</tr>
+	</thead>
+
+	<% previous_group = false %>
+	<tbody>
+		<% issue_list(issues) do |issue, level| -%>
+		<% if query.grouped? && (group = query.group_by_column.value(issue)) != previous_group %>
+			<% reset_cycle %>
+		    <tr class="group open">
+		      <td colspan="<%= query.columns.size + 2 %>">
+		        <span class="expander" onclick="toggleRowGroup(this);">&nbsp;</span>
+		        <%= group.blank? ? 'None' : column_content(query.group_by_column, issue) %>
+		      </td>
+		    </tr>
+		    <% previous_group = group %>		
+		<% end %>
+	  	
+			<tr id="issue-<%= issue.id %>" class="<%= cycle('odd', 'even') %> <%= issue.css_classes %> <%= level > 0 ? "idnt idnt-#{level}" : nil %>">
+			    <td class="id"><%= link_to issue.id, issue_path(issue) %></td>
+			    <%= raw query.columns.map {|column| "<td class=\"#{column.css_classes}\">#{column_content(column, issue)}</td>"}.join %>
+			</tr>	
+	  	<% end %>
+	</tbody>
+	</table>
+<% else %>
+	Query has been removed
+<% end %>

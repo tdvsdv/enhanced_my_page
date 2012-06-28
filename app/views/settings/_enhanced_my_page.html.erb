@@ -1,0 +1,35 @@
+<%-
+defaults = Redmine::Plugin::registered_plugins[:enhanced_my_page].settings[:default] 
+default_my_page_blocks_left=@settings['default_my_page_blocks_left'] || defaults['default_my_page_blocks_left']
+default_my_page_blocks_right=@settings['default_my_page_blocks_right'] || defaults['default_my_page_blocks_right']
+default_my_page_blocks_top=@settings['default_my_page_blocks_top'] || defaults['default_my_page_blocks_top']
+
+queries=Query.find(:all, :conditions => ["project_id IS NULL AND is_public=?", true])
+if queries.nil?
+	q=[]
+else
+	q=queries.map{|e| [e.name, "query#{e.id}"]}
+end
+
+-%>
+
+<table cellspacing="15">
+<tr>
+<td><%=l(:label_default_my_page_blocks_left)%><span class="required">*</span>: </td>
+<td>
+<%= select_tag 'settings[default_my_page_blocks_left][]', options_for_select(%w(issuesassignedtome issuesreportedbyme issueswatched news calendar documents timelog).collect{|v| [l("label_default_my_page_block_#{v}"), v]}+q, default_my_page_blocks_left), :multiple => true, :size => 8 %>
+</td>
+</tr>
+<tr>
+<td><%=l(:label_default_my_page_blocks_right)%><span class="required">*</span>: </td>
+<td>
+<%= select_tag 'settings[default_my_page_blocks_right][]', options_for_select(%w(issuesassignedtome issuesreportedbyme issueswatched news calendar documents timelog).collect{|v| [l("label_default_my_page_block_#{v}"), v]}+q, default_my_page_blocks_right), :multiple => true, :size => 8 %>
+</td>
+</tr>
+<tr>
+<td><%=l(:label_default_my_page_blocks_top)%><span class="required">*</span>: </td>
+<td>
+<%= select_tag 'settings[default_my_page_blocks_top][]', options_for_select(%w(issuesassignedtome issuesreportedbyme issueswatched news calendar documents timelog).collect{|v| [l("label_default_my_page_block_#{v}"), v]}+q, default_my_page_blocks_top), :multiple => true, :size => 8 %>
+</td>
+</tr>
+</table>

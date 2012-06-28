@@ -1,0 +1,12 @@
+# English strings go here for Rails i18n
+ru:
+  label_default_my_page_blocks_left: "Блоки на моей странице, отображаемые по умолчанию (слева)"
+  label_default_my_page_blocks_right: "Блоки на моей странице, отображаемые по умолчанию (справа)"
+  label_default_my_page_blocks_top: "Блоки на моей странице, отображаемые по умолчанию (сверху)"
+  label_default_my_page_block_issuesassignedtome: "Задания на мне"
+  label_default_my_page_block_issuesreportedbyme: "Созданные мной задания"
+  label_default_my_page_block_issueswatched: "Наблюдаемые мной задания"
+  label_default_my_page_block_news: "Новости"
+  label_default_my_page_block_calendar: "Календарь"
+  label_default_my_page_block_documents: "Документы"
+  label_default_my_page_block_timelog: "Затраченное время"
