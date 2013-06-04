@@ -1,3 +1,0 @@
-= enhanced_my_page
-
-Description goes here
