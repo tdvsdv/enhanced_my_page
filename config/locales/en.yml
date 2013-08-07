@@ -1,3 +1,12 @@
 # English strings go here for Rails i18n
 en:
-  my_label: "My label"
+  label_default_my_page_blocks_left: "Blocks on my page that are displayed by default (left)"
+  label_default_my_page_blocks_right: "Blocks on my page that are displayed by default (right)"
+  label_default_my_page_blocks_top: "Blocks on my page that are displayed by default (top)"
+  label_default_my_page_block_issuesassignedtome: "Issues signed to me"
+  label_default_my_page_block_issuesreportedbyme: "Issues reported bu me"
+  label_default_my_page_block_issueswatched: "Observed isues"
+  label_default_my_page_block_news: "News"
+  label_default_my_page_block_calendar: "Calendar"
+  label_default_my_page_block_documents: "Documents"
+  label_default_my_page_block_timelog: "Elapsed time"
