@@ -10,3 +10,4 @@ en:
   label_default_my_page_block_calendar: "Calendar"
   label_default_my_page_block_documents: "Documents"
   label_default_my_page_block_timelog: "Elapsed time"
+  plugin_test_enhanced_my_page: "enhanced_my_page"
