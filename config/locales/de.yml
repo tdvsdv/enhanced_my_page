@@ -1,0 +1,13 @@
+# German strings go here for Rails i18n
+de:
+  label_default_my_page_blocks_left: "Bereiche die voreingestellt links auf 'Meiner Seite' angezeigt werden"
+  label_default_my_page_blocks_right: "Bereiche die voreingestellt rechts auf 'Meiner Seite' angezeigt werden"
+  label_default_my_page_blocks_top: "Bereiche die voreingestellt oben auf 'Meiner Seite' angezeigt werden"
+  label_default_my_page_block_issuesassignedtome: "mir zugewiesene Tickets"
+  label_default_my_page_block_issuesreportedbyme: "meine erstellten Tickets"
+  label_default_my_page_block_issueswatched: "Beobachtete Tickets"
+  label_default_my_page_block_news: "News"
+  label_default_my_page_block_calendar: "Kalendar"
+  label_default_my_page_block_documents: "Dokumente"
+  label_default_my_page_block_timelog: "verbrauchte Zeit"
+  plugin_test_enhanced_my_page: "Verbesserungen für meine Seite"
