@@ -4,7 +4,7 @@ en:
   label_default_my_page_blocks_right: "Blocks on my page that are displayed by default (right)"
   label_default_my_page_blocks_top: "Blocks on my page that are displayed by default (top)"
   label_default_my_page_block_issuesassignedtome: "Issues signed to me"
-  label_default_my_page_block_issuesreportedbyme: "Issues reported bu me"
+  label_default_my_page_block_issuesreportedbyme: "Issues reported by me"
   label_default_my_page_block_issueswatched: "Observed isues"
   label_default_my_page_block_news: "News"
   label_default_my_page_block_calendar: "Calendar"

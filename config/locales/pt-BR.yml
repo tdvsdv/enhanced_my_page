@@ -1,0 +1,12 @@
+pt-BR:
+  label_default_my_page_blocks_left: "Blocos na minha página que são mostrados por padrão (esquerda)"
+  label_default_my_page_blocks_right: "Blocos na minha página que são mostrados por padrão (direita)"
+  label_default_my_page_blocks_top: "Blocos na minha página que são mostrados por padrão (topo)"
+  label_default_my_page_block_issuesassignedtome: "Tarefas atribuídas a mim"
+  label_default_my_page_block_issuesreportedbyme: "Tarefas reportadas por mim"
+  label_default_my_page_block_issueswatched: "Tarefas observadas"
+  label_default_my_page_block_news: "Notícias"
+  label_default_my_page_block_calendar: "Calendário"
+  label_default_my_page_block_documents: "Documentos"
+  label_default_my_page_block_timelog: "Tempo gasto"
+  plugin_test_enhanced_my_page: "Melhorias para minha página"
