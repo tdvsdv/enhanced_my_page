@@ -32,7 +32,7 @@ module EnhancedMyPage
       def page_layout_with_enhanced_my_page
         page_layout_without_enhanced_my_page  
         @blocks = @user.pref[:my_page_layout] || @enhanced_default_layout
-        queries_for_my_page=Query.find(:all, :conditions => ["project_id IS NULL AND is_public=?", true])
+        queries_for_my_page=Query.find(:all).select(&:is_public?)
         queries_for_my_page.each{|e|
           @block_options << [e.name.to_s, "query#{e.id}"]
         }

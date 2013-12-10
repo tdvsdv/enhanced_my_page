@@ -4,7 +4,7 @@ default_my_page_blocks_left=@settings['default_my_page_blocks_left'] || defaults
 default_my_page_blocks_right=@settings['default_my_page_blocks_right'] || defaults['default_my_page_blocks_right']
 default_my_page_blocks_top=@settings['default_my_page_blocks_top'] || defaults['default_my_page_blocks_top']
 
-queries=Query.find(:all, :conditions => ["project_id IS NULL AND is_public=?", true])
+queries=Query.find(:all).select(&:is_public?)
 if queries.nil?
 	q=[]
 else
